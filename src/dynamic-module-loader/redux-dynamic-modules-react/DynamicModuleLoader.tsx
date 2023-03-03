@@ -24,7 +24,7 @@ export interface IDynamicModuleLoaderProps {
  * When this component is initialized, the reducer and saga from the module passed as props will be registered with the system
  * On unmount, they will be unregistered
  */
-export class DynamicModuleLoaderV2 extends React.Component<
+export class DynamicModuleLoader extends React.Component<
   React.PropsWithChildren<IDynamicModuleLoaderProps>
 > {
   public render() {
@@ -96,7 +96,7 @@ class DynamicModuleLoaderImpl extends React.Component<
           <Provider store={this._store}>
             {/* We just rendered the provider, so now we need to render
                         DML again. This one will add the modules */}
-            <DynamicModuleLoaderV2 {...this.props} />
+            <DynamicModuleLoader {...this.props} />
           </Provider>
         );
       }

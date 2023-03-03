@@ -4,11 +4,12 @@
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
-    "outDir": "./lib",
+    "outDir": "./packed/lib",
     "strict": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true,    
+    "resolveJsonModule": true,        
+    "rootDir": "."
   },
-  "include": ["src", "./package.json"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
